@@ -1,11 +1,22 @@
+@font-face{
+    font-family: calculatorFont;
+    src: url(slkscre.ttf);
+}
+
+html{
+    font-family: calculatorFont
+}
+
 body{
     display: flex;
     justify-content: center;
+    font-family: calculatorFont
 }
 
 button{
     font-size: 30px;
     box-sizing: border-box;
+    font-family: calculatorFont
 }
 
 .calculator{
@@ -23,6 +34,9 @@ button{
     height: 25%;
     border: 5px, solid, black;
     box-sizing: border-box;
+    text-align: right;
+    /* font-size: 200px; */
+    font-size: 5em
 }
 
 .operators{
@@ -62,4 +76,5 @@ button{
 
 .enter_button{
     flex: 1 0 0;
+    width: 1px;
 }
