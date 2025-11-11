@@ -30,3 +30,35 @@ const operate = (num1, num2, operator) => {
             break;    
     }   
 }
+
+// Calculator Functionality
+
+const display = document.querySelector(".display")
+const numbers = document.querySelectorAll(".number")
+
+let number1 = null;
+let number2 = null;
+let op = null;
+
+numbers.forEach(number => {
+    number.addEventListener('click', ()=> {
+        if(number1===null){
+            display.textContent = number.textContent;
+            number1 = display.textContent;
+        }
+        else{
+            if (display.textContent.length < 7) {
+            display.textContent += number.textContent;
+            number1 = display.textContent;
+            }
+        }
+
+        
+        // console.log(number.textContent);
+    })
+})
+
+const clearButton = document.querySelector('.clear_button');
+clearButton.addEventListener('click', () => {
+    display.textContent = ''; // clear the display
+});
