@@ -47,7 +47,7 @@ operators.forEach(operator => {
         if(!(number1 == null)){
             display.textContent = operator.textContent;
             op = operator.textContent;
-            console.log("Operator: " + op)
+            // console.log("Operator: " + op)
         }
     })
 })
@@ -76,7 +76,7 @@ numbers.forEach(number => {
             display.textContent = '';
         }
         
-        if(op == null){
+        if(op == null && number1 == null){
             number1 = displayNumber(number1, number.textContent)
         }
         else{
@@ -94,6 +94,9 @@ numbers.forEach(number => {
 const clearButton = document.querySelector('.clear_button');
 clearButton.addEventListener('click', () => {
     display.textContent = ''; // clear the display
+    number1 = null;
+    number2 = null;
+    op = null;
 });
 
 const enterButton = document.querySelector('.enter_button');
